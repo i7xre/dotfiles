@@ -1,0 +1,115 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "color": {
+      "1": "magenta",
+      "2": "magenta"
+    },
+    "padding": {
+      "right": 1
+    }
+  },
+
+  "display": {
+    "separator": " ❯ ",
+    "color": {
+      "keys": "magenta",
+      "title": "magenta"
+    }
+  },
+
+  "modules": [
+    "title",
+    "separator",
+
+    {
+      "type": "os",
+      "key": "OS",
+      "format": "{name} {version-id} · {arch}"
+    },
+
+    {
+      "type": "custom",
+      "key": "Host",
+      "format": "Samsung Galaxy S26 Ultra"
+    },
+
+    {
+      "type": "kernel",
+      "key": "Kernel",
+      "format": "{sysname} {release:-22}"
+    },
+
+    {
+      "type": "uptime",
+      "key": "Uptime"
+    },
+
+    {
+      "type": "packages",
+      "key": "Packages",
+      "format": "{dpkg} (dpkg)"
+    },
+
+    {
+      "type": "shell",
+      "key": "Shell",
+      "format": "{process-name} {version}"
+    },
+
+    {
+      "type": "terminal",
+      "key": "Terminal",
+      "format": "{pretty-name} {version}"
+    },
+
+    {
+      "type": "custom",
+      "key": "CPU",
+      "format": "Snapdragon 8 Elite Gen 5 · 8C"
+    },
+
+    {
+      "type": "memory",
+      "key": "Memory",
+      "format": "{used}/{total} ({percentage})"
+    },
+
+    {
+      "type": "command",
+      "key": "System",
+      "text": "df -h / | awk 'NR==2 {print $2 \" · read-only\"}'"
+    },
+
+    {
+      "type": "disk",
+      "key": "Storage",
+      "folders": "/storage/emulated",
+      "format": "{size-used}/{size-total} ({size-percentage})"
+    },
+
+    {
+      "type": "localip",
+      "key": "Local IP",
+      "showIpv4": true,
+      "showIpv6": false,
+      "showMac": false,
+      "showLoop": false,
+      "showDefaultRouteOnly": true,
+      "compact": true,
+      "format": "{ipv4}"
+    },
+
+    {
+      "type": "battery",
+      "key": "Battery",
+      "format": "{capacity} · {status}"
+    },
+
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
